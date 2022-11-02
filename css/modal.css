@@ -79,38 +79,6 @@ img {
   background-color: unset;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
 
 main {
   font-size: 130%;
@@ -181,7 +149,7 @@ main {
 }
 
 .content {
-  margin: 5% auto;
+  margin: 70% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -230,6 +198,12 @@ input {
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
+}
+.formData:nth-child(8)[data-error]::after {
+  margin: 0;
+}
+.formData:nth-child(9) {
+  margin-bottom: 20px;
 }
 .formData[data-error-visible="true"]::after {
   opacity: 1;
@@ -489,6 +463,68 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+/*media querie */
+@media screen and (max-width: 1080px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    font-weight: bold;
+    color: #FE142F;
+    display: block;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .main-navbar {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    padding: 2%;
+    padding-bottom: 20px;
+    background-color: #fff;
+    z-index: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
+}
+@media screen and (max-width: 990px) {
+  .hero-headline {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header-logo {
+    width: 35%;
+  }
+  .header-logo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .topnav {
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+  }
+  .main-navbar {
+    z-index: 2;
+  }
+  .hero-content {
+    margin-top: 70px;
+    z-index: 0;
+  }
+  .bground {
+    z-index: 0;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
@@ -497,7 +533,8 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: unset;
+    min-width: auto;
   }
   .hero-content::after {
     content: unset;
@@ -506,12 +543,15 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 2rem;
     white-space: normal;
+  }
+  .hero-headline br {
+    display: none;
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .hero-img img {
     border-radius: 10px;

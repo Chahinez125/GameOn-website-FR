@@ -14,11 +14,9 @@
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="./img/Logo.png" width="auto" height="auto" />
+      <img alt="company logo" src="./img/Logo.png" width="auto" height="auto" />
     </div>
     <div class="main-navbar">
-      
-      
       <a href="#"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
       <a href="#"><span>Contact</span></a>
@@ -27,11 +25,9 @@
       <a class= "icon bars" href="javascript:void(0);" class="icon" onclick="editNav()">
         <i class="fa fa-bars"></i>
       </a>
-    
     </div>
-  
     <main>
-      <div class="hero-section" >
+      <div class="hero-section" id="hero" >
         <div class="hero-content">
           <h1 class="hero-headline">
             Marathon national<br>
@@ -56,6 +52,7 @@
           <span class="close"></span>
           <div class="modal-body">
             <form
+              id="form"
               name="reserve"
               action="index.html"
               method="get"
@@ -63,6 +60,7 @@
             >
               <div
                 class="formData">
+                
                 <label>Prénom</label><br>
                 <input
                   class="text-control"
